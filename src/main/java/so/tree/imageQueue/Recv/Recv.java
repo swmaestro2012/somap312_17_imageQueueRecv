@@ -30,10 +30,18 @@ public class Recv {
     	try{
 			QueueingConsumer.Delivery delivery = consumer.nextDelivery();
 			String key = new String(delivery.getBody());
-			  
-			S3UploadModule s3Upload = new S3UploadModule(Settings.S3_ACCESS_KEY, Settings.S3_SECRET_KEY, Settings.S3_BUCKET_NAME, key, true);
+			
+			System.out.println(key.substring(0,5));
+			S3UploadModule s3Upload = new S3UploadModule(Settings.S3_ACCESS_KEY, Settings.S3_SECRET_KEY, Settings.S3_BUCKET_NAME, key.substring(5), true);
 			s3Upload.upload();
-			s3Upload.updateUserLookEntity();
+
+			if(key.substring(0,5).equals("user|")){
+				s3Upload.updateUserLookEntity();
+			}else if(key.substring(0,5).equals("look|")){
+				s3Upload.updateLookEntity();
+			}
+			
+			
     	}catch(Exception e){
     		e.printStackTrace();
     	}

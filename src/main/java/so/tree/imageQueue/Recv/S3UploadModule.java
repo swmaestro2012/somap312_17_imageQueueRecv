@@ -82,10 +82,16 @@ public class S3UploadModule {
 		}
 		
 	}
-	
+
 	public void updateUserLookEntity() throws ClientProtocolException, IOException{
 		HttpClient client = new DefaultHttpClient(); 
-		HttpPut httpPut = new HttpPut(Settings.PLAY_SERVER + key);
+		HttpPut httpPut = new HttpPut(Settings.PLAY_SERVER_USER_LOOK + key.substring(0,key.indexOf("_")));
+		client.execute(httpPut);
+	}
+
+	public void updateLookEntity() throws ClientProtocolException, IOException{
+		HttpClient client = new DefaultHttpClient(); 
+		HttpPut httpPut = new HttpPut(Settings.PLAY_SERVER_LOOK + key);
 		client.execute(httpPut);
 	}
 	
