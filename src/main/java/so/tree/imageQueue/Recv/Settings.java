@@ -1,4 +1,4 @@
-package so.tree.imageQueue;
+package so.tree.imageQueue.Recv;
 
 public class Settings {
 	public final static String IMAGE_PATH = "/Users/Ryun/Develop/workspace/soma2/public/lookImages/";

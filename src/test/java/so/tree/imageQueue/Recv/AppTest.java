@@ -1,4 +1,4 @@
-package so.tree.imageQueue;
+package so.tree.imageQueue.Recv;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -1,4 +1,4 @@
-package so.tree.imageQueue;
+package so.tree.imageQueue.Recv;
 
 import java.io.IOException;
 

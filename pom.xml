@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>so.tree</groupId>
-  <artifactId>imageQueue</artifactId>
+  <artifactId>imageQueueRecv</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>imageQueue</name>
+  <name>imageQueueRecv</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -24,7 +24,7 @@
             <manifest>
                 <addClasspath>true</addClasspath>
                 <classpathPrefix>lib/</classpathPrefix>
-                <mainClass>so.tree.imageQueue.Recv</mainClass>
+                <mainClass>so.tree.imageQueue.Recv.Recv</mainClass>
             </manifest>
         </archive>
     </configuration>
